@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VolunteerConnect | Make a Difference</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell header-content">
+      <a href="/" class="brand" aria-label="VolunteerConnect home"><span class="brand-icon">V</span>VolunteerConnect</a>
+      <span class="demo-badge">Student demo</span>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section class="hero">
+      <p class="eyebrow">VOLUNTEER. CONNECT. GROW.</p>
+      <h1>Make an impact,<br /><span>one opportunity at a time.</span></h1>
+      <p>Find meaningful volunteer experiences, sign up in a click, and keep track of your service.</p>
+      <a class="primary-link" href="#opportunities">Explore opportunities ↓</a>
+    </section>
+
+    <section class="dashboard" aria-labelledby="dashboard-title">
+      <div class="section-heading"><div><p class="eyebrow">YOUR JOURNEY</p><h2 id="dashboard-title">Student dashboard</h2></div><span id="student-name" class="small-tag">Demo Student</span></div>
+      <div class="stats-grid">
+        <div class="stat-card"><span>Registered events</span><strong id="registered-count">—</strong><small>Opportunities you've signed up for</small></div>
+        <div class="stat-card accent"><span>Service hours logged</span><strong id="total-hours">—</strong><small>Hours toward your impact</small></div>
+      </div>
+      <div class="dashboard-grid">
+        <div class="panel"><h3>My registrations</h3><div id="registrations-list" class="stack"><p class="muted">Loading...</p></div></div>
+        <div class="panel"><h3>Log volunteer hours</h3><p class="muted panel-description">For this MVP, log hours against an event you've registered for.</p>
+          <form id="hours-form">
+            <label for="hours-event">Registered event</label><select id="hours-event" required><option value="">Select an event</option></select>
+            <label for="hours-amount">Hours completed</label><input id="hours-amount" type="number" min="0.25" max="24" step="0.25" placeholder="e.g. 2.5" required />
+            <button type="submit" class="primary-button">Save hours</button>
+          </form>
+          <h4>Recent activity</h4><div id="activity-list" class="stack"><p class="muted">No hours logged yet.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="opportunities" class="opportunities" aria-labelledby="opportunities-title">
+      <div class="section-heading"><div><p class="eyebrow">FIND YOUR PURPOSE</p><h2 id="opportunities-title">Volunteer opportunities</h2></div></div>
+      <label class="search-label" for="search">Search opportunities</label>
+      <input id="search" class="search" type="search" placeholder="Search by title, location, organization, or category..." />
+      <div id="opportunity-grid" class="opportunity-grid"><p class="muted">Loading opportunities...</p></div>
+    </section>
+    <div id="notification" role="status" aria-live="polite" class="notification" hidden></div>
+  </main>
+  <footer class="footer"><div class="shell">VolunteerConnect • Class project MVP • Sample events and demo student</div></footer>
+</body>
+</html>
