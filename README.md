@@ -10,7 +10,7 @@ VolunteerConnect is a web application that helps college students discover volun
 
 **Git workflow:** work was committed on `feature/mvp-core` and merged through [Pull Request #1](https://github.com/bracytrae/volunteer-connect/pull/1) into `main`.
 
-**Google Cloud Run:** deployment is a separate submission requirement. See [Cloud Run attempt guide](docs/CLOUD_RUN_ATTEMPT.md). Do not interpret local Docker success as successful cloud deployment.
+**Google Cloud Run:** manual deployment completed on November 22, 2026. [Deployed service](https://volunteerconnect-935566074245.us-central1.run.app) in `us-central1` (revision `volunteerconnect-00001-wvl`). The student reported a server error when viewing the deployed app, likely because no hosted PostgreSQL database was configured. See the [deployment record](docs/CLOUD_RUN_ATTEMPT.md).
 
 ## Technology stack
 
@@ -22,7 +22,7 @@ VolunteerConnect is a web application that helps college students discover volun
 | Containerization | Docker / Docker Compose |
 | Automated testing | Jest / Supertest |
 | CI | GitHub Actions |
-| Planned cloud host | Google Cloud Run |
+| Cloud host | Google Cloud Run (deployed; data functionality unresolved) |
 | AI development support | ChatGPT; see [usage record](docs/AI_USAGE_LOG.md) |
 
 ## Run locally
@@ -58,6 +58,7 @@ The nine automated tests use a mocked database, so they are not a substitute for
 - [Merged MVP feature pull request](https://github.com/bracytrae/volunteer-connect/pull/1)
 - [GitHub Actions runs](https://github.com/bracytrae/volunteer-connect/actions)
 - [CI workflow](.github/workflows/ci.yml)
+- [Cloud Run deployment](https://volunteerconnect-935566074245.us-central1.run.app)
 - [Sprint 1 progress record](docs/SPRINT1_PROGRESS.md)
 - [AI usage log](docs/AI_USAGE_LOG.md)
 
@@ -65,7 +66,7 @@ The nine automated tests use a mocked database, so they are not a substitute for
 
 This is an educational MVP, not a production-ready website. It uses a predefined demo student rather than sign-in/authentication, seeded opportunities rather than an admin interface, and self-reported service hours. Advanced filters, registration cancellation, and AI-powered recommendations are planned for later work.
 
-Cloud Run does not automatically deploy the local PostgreSQL container defined in `compose.yaml`. A cloud-hosted database and secure configuration would be required for data-dependent routes to work remotely. Never commit actual credentials to the repository.
+The Cloud Run container deployed successfully, but the user reports a server error. Cloud Run does not automatically deploy the local PostgreSQL container defined in `compose.yaml`. A cloud-hosted database and secure configuration would be required for data-dependent routes to work remotely. Never commit actual credentials to the repository.
 
 ## Agile project documentation
 
