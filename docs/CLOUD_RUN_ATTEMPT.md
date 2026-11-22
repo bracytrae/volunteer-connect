@@ -14,12 +14,12 @@ Google may prompt to enable APIs, configure builds, or select a region. Record w
 
 **Important limitation:** `compose.yaml` provides a local PostgreSQL container only. Cloud Run deploys the app service, not this local database. Without a reachable hosted PostgreSQL instance and configuration, the homepage and `/api/health` can load while feature endpoints that query PostgreSQL fail. This is why the course may allow a broken deployment at MVP stage. Never commit database credentials to GitHub.
 
-## Actual attempt log
-- Date/time:
-- Project ID:
-- Deployment command:
-- Result: Success / Failed
-- Cloud Run URL (only if real):
-- Exact error, if failed:
-- Screenshot or Cloud console evidence:
-- Next step:
+## Actual attempt log — November 22, 2026
+- Project ID: `recipe-sharing-app-cloud`
+- Command: `gcloud run deploy volunteerconnect --source . --project recipe-sharing-app-cloud --region us-central1 --allow-unauthenticated`
+- Result: **Successful deployment**, revision `volunteerconnect-00001-wvl`; Google Cloud reported 100% of traffic served.
+- URL: https://volunteerconnect-935566074245.us-central1.run.app
+- User's follow-up: The deployed site displays a **server error**. The exact request and server logs were not inspected, so the specific runtime failure is unconfirmed.
+- Likely cause: No remotely reachable PostgreSQL database was configured. Docker Compose's local database does not accompany Cloud Run.
+- Evidence: CLI output saved by the developer, including deployment success and URL.
+- Later work: Inspect Cloud Run logs and configure a hosted database; production data functions remain incomplete.

@@ -1,14 +1,16 @@
-# AI tool usage log — VolunteerConnect
+# AI usage log — VolunteerConnect
 
-This file is a record **template**. Keep only statements that truthfully describe what happened and add dates and your verification results.
+This document records actual AI use and independent verification for Unit 12.
 
-| Date | Tool | Task performed | Developer verification or changes |
+| Date | Tool | Assistance | Verification / qualification |
 |---|---|---|---|
-| 2026-11-20 | ChatGPT | Helped outline and generate a VolunteerConnect starter application with Express, PostgreSQL, Docker, tests, and documentation | **Not yet verified.** Run app and tests; document fixes. |
-| YYYY-MM-DD | GitHub Copilot or other AI tool (only if used) | Describe actual assistance | What did you test, reject, or change? |
+| November 20–21, 2026 | ChatGPT | Helped plan and scaffold Node.js/Express frontend and backend, PostgreSQL schema, Docker setup, API tests, and documentation. | Developer confirmed the Docker app worked locally and event registration succeeded; all nine local tests passed. |
+| November 20–21, 2026 | ChatGPT | Assisted with creating a GitHub Actions CI workflow and professional feature branch / pull request process. | GitHub Actions reported success and MVP PR #1 was merged. |
+| November 22, 2026 | ChatGPT | Assisted with the Cloud Run command and documenting the deployment outcome and limitations. | Developer's CLI output confirmed successful deployment. The deployed site then displayed a server error, which remains unresolved. |
+| November 22, 2026 | ChatGPT | Updated MVP README, deployment record, and AI-use documentation on a documentation branch. | Review the documentation PR before merging. |
 
-## Example reflection (edit to match your actual work)
+## Reflection
 
-> I used ChatGPT to help plan and scaffold the MVP architecture and draft tests and configuration files. I reviewed the code and validated functionality by running the application in Docker and executing API tests. When suggested code or setup was incorrect, I made and documented the corrections. I used AI as a development aid rather than treating generated code as independently verified.
+ChatGPT helped accelerate application scaffolding, testing setup, CI workflow configuration, and documentation. This generated work was verified rather than accepted on faith: the developer ran the Docker app and tests, validated registration locally, and checked CI results. The Cloud Run deployment was created successfully, but the website still has an unresolved runtime error and is not presented as fully functional online.
 
-**Do not claim you ran a test, used Copilot, or deployed anything until you actually did so.**
+GitHub Copilot is **not** listed as used because its actual usage was not confirmed. Add an accurate entry only if you used it.
